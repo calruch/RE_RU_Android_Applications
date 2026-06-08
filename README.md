@@ -24,13 +24,14 @@ The application will then output all of the information found into a readable fo
 
 ## Results found:
 
-19 search terms were in the VTB online app, 6 WiFi related, 4 VPN related, 2 proxy related, 3 cellular related and 4 device related. Using these search terms, I found that there was a lot of APKs that were found to have these terms in them. Below is a quick summary of the results found in the 34 APKs that were searched (this does not account for the number of matches found, just the number of APKs that had at least 1 match for each category):
+Below is a quick summary of the results found in the 34 APKs that were searched (this does not account for the number of matches found, just the number of APKs that had at least 1 match for each category):
 
-- **VPN matches:** 34/34
-- **Cellular matches:** 34/34
+- **VPN matches:** 33/34
+- **Cellular matches:** 32/34
 - **WiFi matches:** 32/34
-- **Device matches:** 32/34
-- **Proxy matches:** 3/34
+- **Device matches:** 34/34
+- **Proxy matches:** 15/34
+- **Misc matches:** 2/34
 
 ![Partial Results](misc/images/Presults.png)
 
@@ -112,6 +113,13 @@ If you are wanting to remove all of the fingerprint terms from the fingerprint t
 
 ```bash
 ./scripts/termAdder.sh
+```
+
+#### Get results after running the auto term search script
+
+```bash
+python3 scripts/resultsExtractor.py
+python3 scripts/resultsExtractor.py v
 ```
 
 ## Future work 

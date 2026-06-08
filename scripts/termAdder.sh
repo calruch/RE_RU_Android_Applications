@@ -5,7 +5,7 @@
 vpnFile="fingerprint/vpnF.txt"
 proxyFile="fingerprint/proxyF.txt"
 wifiFile="fingerprint/wifiF.txt"
-bluetoothFile="fingerprint/bluetoothF.txt"
+miscFile="fingerprint/miscF.txt"
 cellularFile="fingerprint/cellularF.txt"
 deviceFile="fingerprint/deviceF.txt"
 
@@ -34,7 +34,7 @@ while [ $check -eq 1 ]; do
     echo "1. VPN"
     echo "2. Proxy"
     echo "3. Wifi"
-    echo "4. Bluetooth"
+    echo "4. Miscellaneous"
     echo "5. Cellular"
     echo "6. Device"
     echo "7. Exit"
@@ -50,8 +50,8 @@ while [ $check -eq 1 ]; do
         echo "Wifi term selected."
         getTerm $wifiFile
     elif [ $type -eq 4 ]; then
-        echo "Bluetooth term selected."
-        getTerm $bluetoothFile
+        echo "Miscellaneous term selected."
+        getTerm $miscFile
     elif [ $type -eq 5 ]; then
         echo "Cellular term selected."
         getTerm $cellularFile

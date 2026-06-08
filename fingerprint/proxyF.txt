@@ -1,2 +1,3 @@
 Landroid/net/LinkProperties!<>!getHttpProxy()Landroid/net/ProxyInfo
 getHttpProxy()
+http.proxyHost

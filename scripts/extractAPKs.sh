@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cat scripts/textLists/CalsArt.txt
 
 # Pulling the apps off the phone section

@@ -1,5 +1,6 @@
 Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities
 Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
 Landroid/net/NetworkCapabilities;->hasTransport(I)Z!<>!const/4 v1, 0x4
-connectivity!<>!hasTransport
-
+TRANSPORT_VPN
+tun0
+/proc/net/tcp

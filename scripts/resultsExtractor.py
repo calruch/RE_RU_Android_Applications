@@ -5,7 +5,7 @@ import sys
 
 def tracker(apkResults, apk, file):
     fileMap = {
-        'bluetoothF.txt': 0,
+        'miscF.txt': 0,
         'cellularF.txt': 1,
         'deviceF.txt': 2,
         'proxyF.txt': 3,
@@ -27,7 +27,7 @@ def printResults(apkResults):
         print("---------------------------------")
         print(f"|APK: {apk}:\t")
         print("|===============================|")
-        print(f"|Bluetooth matches: {results[0]}\t\t|\n|Cellular matches: {results[1]}\t\t|\n|Device matches: {results[2]}\t\t|\n|Proxy matches: {results[3]}\t\t|\n|VPN matches: {results[4]}\t\t\t|\n|WiFi matches: {results[5]}\t\t|")
+        print(f"|Misc matches: {results[0]}\t\t|\n|Cellular matches: {results[1]}\t\t|\n|Device matches: {results[2]}\t\t|\n|Proxy matches: {results[3]}\t\t|\n|VPN matches: {results[4]}\t\t\t|\n|WiFi matches: {results[5]}\t\t|")
         print("---------------------------------")
 def main():
 
