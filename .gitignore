@@ -1,0 +1,13 @@
+jadxAPKs/
+pulledApks/
+*.apk
+*.dex
+*.jar
+*.class
+*.zip
+*.tar
+*.gz
+__pycache__/
+*.pyc
+scripts/textLists/*.txt
+!scripts/textLists/CalsArt.txt

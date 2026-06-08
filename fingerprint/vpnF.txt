@@ -1,0 +1,2 @@
+Landroid/net/ConnectivityManager;
+getSystemService(Ljava/lang/String)!<>!connectivity
