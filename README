@@ -12,7 +12,7 @@ This project is based upon the research done upon russian apps and their surviel
 
 ## Initial Analysis
 
-The initial analysis phase of this project consisted of using my script to extract the APKs from the android device with `adb` and `apktool` to decompile the APKs. I also used `jadx` to decompile the APKs into java code to be able to read through the code and find the terms that I wanted to search for in the next phase of this project. The main APK that was searched was the T-bank app `ru.vtb24.mobilebanking.android`, I followed the rabbit trail down this app and found where all of the information was being serialized as well as where all of the information from the device was being harvested at, this is where I found the terms that I wanted to search for in the fingerprinting portion of this project.
+The initial analysis phase of this project consisted of using my script to extract the APKs from the android device with `adb` and `apktool` to decompile the APKs. I also used `jadx` to decompile the APKs into java code to be able to read through the code and find the terms that I wanted to search for in the next phase of this project. The main APK that was searched was the VTB online app `ru.vtb24.mobilebanking.android`, I followed the rabbit trail down this app and found where all of the information was being serialized as well as where all of the information from the device was being harvested at, this is where I found the terms that I wanted to search for in the fingerprinting portion of this project.
 
 ## What I built
 
@@ -22,12 +22,61 @@ The second main component of this project was a custom script to automate search
 
 The application will then output all of the information found into a readable format. 
 
+## Results found:
+
+19 search terms were in the VTB online app, 6 WiFi related, 4 VPN related, 2 proxy related, 3 cellular related and 4 device related. Using these search terms, I found that there was a lot of APKs that were found to have these terms in them. Below is a quick summary of the results found in the 34 APKs that were searched (this does not account for the number of matches found, just the number of APKs that had at least 1 match for each category):
+
+- **VPN matches:** 34/34
+- **Cellular matches:** 34/34
+- **WiFi matches:** 32/34
+- **Device matches:** 32/34
+- **Proxy matches:** 3/34
+
+## Apps that were searched
+
+|App name | APK name | How | 
+|---------|----------| --------|
+|T-Bank | com.idamob.tinkoff.android|  Fingerprint |
+|VK video | com.vk.vkvideo | Fingerprint |
+|Alfa-Bank | ru.alfabank.mobile.android | Fingerprint |
+|Yandex Market | ru.beru.android | Fingerprint |
+|Odnoklassniki | ru.ok.android | Fingerprint |
+|Yandex Eda | ru.foodfox.client | Fingerprint |
+|MegaMarket | ru.megamarket.marketplace | Fingerprint |
+|Avito | com.avito.android | Fingerprint |
+|Yandex Browser | com.yandex.browser | Fingerprint |
+|VKontakte | com.vkontakte.android | Fingerprint |
+|VTB Online | ru.vtb24.mobilebanking.android | Manually |
+|RuStore | ru.vk.store | Fingerprint |
+|2GIS | ru.dublgis.dgismobile | Fingerprint |
+|Dzen | ru.zen.android | Fingerprint |
+|My MTS | ru.mts.mymts | Fingerprint |
+|Mail.ru Mail | ru.mail.mailapp | Fingerprint |
+|Yandex Go | ru.yandex.taxi | Fingerprint |
+|MAX / TamTam | ru.oneme.app | Fingerprint |
+|Ozon | ru.ozon.app.android | Fingerprint |
+|Kinopoisk | ru.kinopoisk | Fingerprint |
+|MegaFon | ru.megafon.mlk | Fingerprint |
+|Yandex Music | ru.yandex.music | Fingerprint |
+|Gosuslugi | ru.rostel | Fingerprint |
+|Mir Pay | ru.nspk.mirpay | Fingerprint |
+|Samokat | ru.sbcs.store | Fingerprint |
+|Wildberries | com.wildberries.ru | Fingerprint |
+|Yandex Maps | ru.yandex.yandexmaps | Fingerprint |
+|Rutube | ru.rutube.app | Fingerprint |
+|VK Music | com.uma.musicvk | Fingerprint |
+|Sberbank Online | ru.sberbankmobile | Fingerprint |
+|Дом.ru | com.ertelecom.agent | Fingerprint |
+|Systempackage | com.google.android.odad | Fingerprint |
+|YouTube | com.google.android.youtube | Fingerprint |
+|Magisk | com.topjohnwu.magisk | Fingerprint |
+
 ## Tools used
 
 - Linux
 - Python
 - Bash 
-- Jadx-1.5.5
+- Jadx-1.5.5 [Link](https://github.com/skylot/jadx)
 - apktool_3.0.2.jar
 - ripgrep
 
@@ -36,8 +85,8 @@ The application will then output all of the information found into a readable fo
 ### Cloning the repository
 
 ```bash
-git clone
-cd 
+git clone git@github.com:calruch/RE_RU_Android_Applications.git
+cd RE_RU_Android_Applications
 ```
 ### Getting the APKs
 
