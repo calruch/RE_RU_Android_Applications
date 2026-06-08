@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cat scripts/textLists/CalsArt.txt
+
 # Pulling the apps off the phone section
 adb shell pm list packages -f | grep "package:/data" > scripts/textLists/apklist.txt
 ls pulledApks > scripts/textLists/installedApks.txt

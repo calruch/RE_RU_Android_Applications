@@ -32,6 +32,8 @@ The application will then output all of the information found into a readable fo
 - **Device matches:** 32/34
 - **Proxy matches:** 3/34
 
+![Partial Results](misc/images/Presults.png)
+
 ## Apps that were searched
 
 |App name | APK name | How | 
@@ -91,23 +93,25 @@ cd RE_RU_Android_Applications
 ### Getting the APKs
 
 ```bash
-./extractAPKs.sh
+./scripts/extractAPKs.sh
 ```
+
+![Extracted APKs](misc/images/ExtractedAPKS.png)
 
 #### Auto term search
 
 If you are wanting to remove all of the fingerprint terms from the fingerprint text files and add your own, just use your text editor to remove all of the terms from the text files in the `fingerprint/` directory.
 
 ```bash
-./autoTS.sh
-./autoTS.sh v
+./scripts/autoTS.sh
+./scripts/autoTS.sh v
 ```
 ![Script Running](misc/images/autoTSscriptRunning.png)
 
 #### Add terms to the fingerprint search
 
 ```bash
-./termAdder.sh
+./scripts/termAdder.sh
 ```
 
 ## Future work 
