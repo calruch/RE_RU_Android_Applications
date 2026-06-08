@@ -11,3 +11,5 @@ __pycache__/
 *.pyc
 scripts/textLists/*.txt
 !scripts/textLists/CalsArt.txt
+
+jadx/
