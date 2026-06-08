@@ -69,19 +69,19 @@ Below is a quick summary of the results found in the 34 APKs that were searched 
 |Rutube | ru.rutube.app | Fingerprint |
 |VK Music | com.uma.musicvk | Fingerprint |
 |Sberbank Online | ru.sberbankmobile | Fingerprint |
-|Дом.ru | com.ertelecom.agent | Fingerprint |
+|Мой Дом.ру | com.ertelecom.agent | Fingerprint |
 |Systempackage | com.google.android.odad | Fingerprint |
 |YouTube | com.google.android.youtube | Fingerprint |
 |Magisk | com.topjohnwu.magisk | Fingerprint |
 
 ## Tools used
 
-- Linux
-- Python
-- Bash 
-- Jadx-1.5.5 [Link](https://github.com/skylot/jadx)
-- apktool_3.0.2.jar
-- ripgrep
+- Linux 6.14.0-37-generic
+- Python 3.12.3
+- Bash 5.2.21
+- Jadx-1.5.5 [Github link](https://github.com/skylot/jadx)
+- apktool_3.0.2.jar [Github link](https://github.com/ibotpeaches/apktool)
+- ripgrep 14.1.0 [Installation Steps](https://github.com/BurntSushi/ripgrep/blob/master/README.md#installation)
 
 ## How to run 
 
@@ -121,6 +121,16 @@ If you are wanting to remove all of the fingerprint terms from the fingerprint t
 python3 scripts/resultsExtractor.py
 python3 scripts/resultsExtractor.py v
 ```
+
+![Verbose mode](misc/images/VerboseMode.png)
+
+#### If you are looking for a specific term in the results, use the searchAPK script or a chain grep command
+
+```bash
+./scripts/searchAPK.py
+./scripts/searchAPK.py | grep -A 8 "searchterm" 
+```
+![Search APK](misc/images/SearchAPK.png)
 
 ## Future work 
 
