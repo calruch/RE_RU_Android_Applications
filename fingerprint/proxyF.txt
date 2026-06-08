@@ -1,0 +1,1 @@
+Landroid/net/LinkProperties!<>!getHttpProxy()Landroid/net/ProxyInfo

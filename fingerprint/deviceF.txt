@@ -1,0 +1,4 @@
+Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+Landroid/os/Build;->MODEL:Ljava/lang/String;
+Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+Landroid/os/Build$VERSION;->SDK_INT:I

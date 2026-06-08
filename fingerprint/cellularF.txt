@@ -1,0 +1,3 @@
+Landroid/telephony/TelephonyManager;->getNetworkOperatorName()Ljava/lang/String;
+getSystemService(Ljava/lang/String)!<>!phone
+Landroid/telephony/TelephonyManager;

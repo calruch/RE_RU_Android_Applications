@@ -41,14 +41,19 @@ cd
 ```
 ### Getting the APKs
 
-### Running the application
+```bash
+./extractAPKs.sh
+```
 
 #### Auto term search
 
+If you are wanting to remove all of the fingerprint terms from the fingerprint text files and add your own, just use your text editor to remove all of the terms from the text files in the `fingerprint/` directory.
+
 ```bash
-./auto
+./autoTS.sh
 ./autoTS.sh v
 ```
+![Script Running](misc/images/autoTSscriptRunning.png)
 
 #### Add terms to the fingerprint search
 
@@ -63,3 +68,5 @@ cd
 - I would like to be able to create a machine learning model to be able classify the apps based on what fingerprint terms they are found with. 
 
 - I would like to have increased the sample size of the apps that I am working with, I had limited time and chose to only work with the 30 apps that were mentioned in the paper.
+
+- Perform a dynamic analysis using a proxy to be able to see what information is being sent out from the device and to where it is being sent.

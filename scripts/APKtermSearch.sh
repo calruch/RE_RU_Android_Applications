@@ -17,6 +17,7 @@
 # Ripgrep flags
 # -F = fixed string search, not using regex to search for strings
 # -l = Get the File name that the matching string was in (option 3 does have this)
+# -- = I was having issues and this was supposed to help with the parsing
 
 # Sed command
 # 's|/.*||' - This will Chop everything off after '/', so I can get the name of the APK
@@ -34,25 +35,25 @@ fi
 
 
 # This will get you into the pulled APKs directory
-cd $(echo "pulledApks/$1")
+cd "pulledApks/$1"
 
 # This part is for the actual ripgrep portion
 if [ $3 -eq '1' ]; then 	
-	rg -l -F $2 | grep ".smali"
+	rg -l -F -- "$2" | grep ".smali"
 elif [ $3 -eq '2' ]; then
-	rg -l -F $2 
+	rg -l -F -- "$2"
 elif [ $3 -eq '3' ]; then
-	rg $2 -F
+	rg -F -- "$2"
 elif [ $3 -eq '4' ]; then
 	touch ../scripts/textLists/rgList.txt
-	rg -l -F $2 | grep ".smali" | sed 's|/.*||' > ../scripts/textLists/rgList.txt
+	rg -l -F -- "$2" | grep ".smali" | sed 's|/.*||' > ../scripts/textLists/rgList.txt
 	cd ..
 	python3 scripts/rgLParser.py
 elif [ $3 -eq '5' ]; then
-	string1=$(echo $2 | sed 's#!<>!.*##')
-	string2=$(echo $2 | sed 's#^.*!<>!##')
+	string1=$(echo "$2" | sed 's#!<>!.*##')
+	string2=$(echo "$2" | sed 's#^.*!<>!##')
 	# This is a custom chain of ripgrep commands to search for two terms.
-	rg $string1 -F | xargs rg -l -F $string2 | sed 's|/.*||' > ../scripts/textLists/rgList.txt
+	rg -l -F -- "$string1"| xargs -r rg -l -F -- "$string2" | sed 's|/.*||' > ../scripts/textLists/rgList.txt
 	cd ..
 	python3 scripts/rgLParser.py
 

@@ -40,7 +40,8 @@ while read -r fingerprintFile; do
 	while read -r line; do 
 		verboseMessage "Searching for term: $line" "$verbose"
 		printFile "$line"
-		if [[ $line == *"!<>!"* ]]; then
+		
+		if [[ "$line" == *"!<>!"* ]]; then
 			./scripts/APKtermSearch.sh . "$line" 5 < /dev/null
 			
 		else
@@ -52,6 +53,6 @@ while read -r fingerprintFile; do
 done < scripts/textLists/fingerprintFiles.txt 
 
 
-cat scripts/textLists/FingerPrint.txt
-
+#cat scripts/textLists/FingerPrint.txt
+python3 scripts/resultsExtractor.py
 
